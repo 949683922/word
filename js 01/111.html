@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #box,#box-1 {
+            width:100px;
+            height:100px;
+            margin-bottom:100px;
+            background-color:#ccc;
+            text-align:center;
+            line-height:100px;
+        }
+    </style>
+</head>
+<body>
+    <div id="box"></div>
+    <div id="box-1"></div>
+    <script>
+        var GG = document.getElementById("box");//box赋值给GG
+            aBox = document.getElementById("box-1");//box-1赋值给aBox
+            //鼠标点击GG使aBox显示div1
+            GG.onclick = function () {
+                aBox.innerHTML = "div1";
+            }
+           //鼠标点击aBox使GG显示div2
+            aBox.onclick = function () {
+            GG.innerHTML = "div2";
+             }
+            //鼠标移出GG使aBox显示
+            GG.onmouseout  = function () {
+                aBox.innerHTML = "";
+            }
+            //鼠标点击aBox使GG显示div2
+            aBox.onmouseout = function () {
+                GG.innerHTML = "";
+            }
+
+    </script>
+
+</body>
+
+</html>
